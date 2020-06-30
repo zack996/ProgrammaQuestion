@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.PriorityQueue;
 import java.util.Scanner;
 
 public class FindKthLargest {
@@ -13,7 +14,19 @@ public class FindKthLargest {
         }
         int k = scanner.nextInt();
         //---------------------------------------------------
-        //可以直接Array.sort(nums) 但还是想用堆排做一下
+        //小顶堆
+        PriorityQueue<Integer> integers = new PriorityQueue<>(k);
+        for (int i = 0; i < nums.length; i++) {
+            if(i<k){
+                integers.add(nums[i]);
+            }else if(integers.peek()<nums[i]){
+                integers.poll();
+                integers.add(nums[i]);
+            }
+        }
+        System.out.println(integers.poll());
+
+        //堆排
         for (int i = nums.length/2-1; i >= 0; i--) {
             adjustHeap(nums,i,nums.length);
         }
