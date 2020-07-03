@@ -1,3 +1,5 @@
+import node.ListNode;
+
 public class MergeKLists {
 
     public static void main(String[] args) {
