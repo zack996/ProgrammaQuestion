@@ -18,8 +18,8 @@ public class RemoveNthFromEnd {
 
     public static ListNode removeNthFromEnd(ListNode head, int n) {
         //迭代
-/*      Stack<ListNode> stack = new Stack<>();
-        ListNode tmp = head;
+/*      Stack<node.ListNode.ListNode> stack = new Stack<>();
+        node.ListNode.ListNode tmp = head;
         while(tmp!=null){
             stack.push(tmp);
             tmp=tmp.next;
@@ -28,7 +28,7 @@ public class RemoveNthFromEnd {
         if(stack.size()==n){
             head=head.next;
         }else{
-            ListNode pre = stack.get(stack.size() - n - 1);
+            node.ListNode.ListNode pre = stack.get(stack.size() - n - 1);
             pre.next=pre.next.next;
         }
         return head;*/
